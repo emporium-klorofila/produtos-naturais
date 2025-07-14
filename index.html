@@ -100,19 +100,24 @@
     <a class="button" href="https://shopee.com.br/lotusdearoma">Acessar a loja na Shopee</a>
   </div>
 
-  <!-- Seção 3 - Endereço -->
+  <!-- Seção 3 - Slogan e envios (carrossel) -->
   <div class="section">
-    <img src="envios.png" alt="Informações de envio">
-    <a class="button" href="https://maps.app.goo.gl/LdWX1n9oQuPqXu7d6">Ver rota no Google Maps</a>
+    <div class="carousel-container" id="carousel-container-endereco">
+      <img src="Mais que natural, essencial pra você..png" alt="Slogan e Envios" id="carousel-endereco">
+      <div class="carousel-indicators" id="indicators-endereco"></div>
+    </div>
   </div>
 
-  <!-- Seção 4 - Redes sociais -->
+  <!-- Seção 4 - Redes sociais com dois botões -->
   <div class="section">
     <div class="carousel-container" id="carousel-container-parceria">
       <img src="instagram (2).png" alt="Instagram Emporium Klorofila" id="carousel-parceria">
       <div class="carousel-indicators" id="indicators-parceria"></div>
     </div>
-    <a class="button" href="https://www.instagram.com/klorofila_emporium">Seguir no Instagram</a>
+    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+      <a class="button" style="width: 45%;" href="https://www.instagram.com/klorofila_emporium" target="_blank" rel="noopener">Seguir no Instagram</a>
+      <a class="button" style="width: 45%;" href="https://br.pinterest.com/klorofilaemporium/" target="_blank" rel="noopener">Seguir no Pinterest</a>
+    </div>
   </div>
 
   <footer>
@@ -166,10 +171,7 @@
         updateIndicators();
       }
 
-      container.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-        isDown = true;
-      });
+      container.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; isDown = true; });
       container.addEventListener('touchmove', (e) => {
         if (!isDown) return;
         const diffX = e.touches[0].clientX - startX;
@@ -186,10 +188,7 @@
       });
       container.addEventListener('touchend', () => { isDown = false; });
 
-      container.addEventListener('mousedown', (e) => {
-        startX = e.clientX;
-        isDown = true;
-      });
+      container.addEventListener('mousedown', (e) => { startX = e.clientX; isDown = true; });
       container.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         const diffX = e.clientX - startX;
@@ -211,18 +210,9 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      addSwipe(
-        'carousel-container-loja',
-        ['aromaterapia.png', 'cosmeticos.png', 'suplementos.png'],
-        'carousel-loja',
-        'indicators-loja'
-      );
-      addSwipe(
-        'carousel-container-parceria',
-        ['instagram (2).png', 'instagram (3).png', 'instagram.png'],
-        'carousel-parceria',
-        'indicators-parceria'
-      );
+      addSwipe('carousel-container-loja', ['aromaterapia.png', 'cosmeticos.png', 'suplementos.png'], 'carousel-loja', 'indicators-loja');
+      addSwipe('carousel-container-parceria', ['instagram (2).png', 'instagram (3).png', 'instagram.png'], 'carousel-parceria', 'indicators-parceria');
+      addSwipe('carousel-container-endereco', ['Mais que natural, essencial pra você..png', 'envios.png'], 'carousel-endereco', 'indicators-endereco');
     });
   </script>
 </body>
