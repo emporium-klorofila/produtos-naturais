@@ -1,291 +1,229 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://emporium-klorofila.github.io/produtos-naturais/logo-emporium-klorofila.ico" />
-
-    <!-- Open Graph para compartilhamento -->
-    <meta property="og:title" content="Emporium Klorofila - Produtos Naturais" />
-    <meta property="og:description" content="Mais que natural, essencial pra você!" />
-    <meta property="og:image" content="https://emporium-klorofila.github.io/produtos-naturais/cabecalho.png" />
-    <meta property="og:url" content="https://emporium-klorofila.github.io/produtos-naturais/" />
-    <meta property="og:type" content="website" />
-
-    <title>Emporium Klorofila - Produtos Naturais</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            display: none;
-            /* Código anterior comentado */
-            /* background-color: #107214;
-            color: #7aca2a;
-            font-size: 24px;
-            padding: 20px 10px;
-            font-weight: bold; */
-        }
-        .section {
-            margin: 20px auto;
-            max-width: 600px;
-        }
-        .section img {
-            width: 100%;
-            height: auto;
-            border-radius: 0px;
-            transition: opacity 0.5s ease;
-        }
-        .button {
-            display: inline-block;
-            width: 80%;
-            padding: 15px;
-            margin: 15px 0;
-            font-size: 16px;
-            color: #ffffff;
-            background-color: #107214;
-            border: 2px solid #7aca2a;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .button:hover {
-            background-color: #0d4f0a;
-        }
-        footer {
-            margin: 40px 0 20px;
-            font-size: 14px;
-            color: #107214;
-            background-color: #f8f8f8;
-            padding: 10px;
-        }
-
-        /* Botão flutuante do WhatsApp - somente imagem */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-        }
-        .whatsapp-float img {
-            width: 60px;
-            height: 60px;
-            margin: 0;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-            background: none;
-        }
-
-        /* Carrossel */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-indicators {
-            text-align: center;
-            margin-top: 8px;
-        }
-
-        .carousel-indicators span {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            margin: 0 4px;
-            background-color: #999;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .carousel-indicators .active {
-            background-color: #000;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="https://emporium-klorofila.github.io/produtos-naturais/logo-emporium-klorofila.ico" />
+  <meta property="og:title" content="Emporium Klorofila - Produtos Naturais" />
+  <meta property="og:description" content="Mais que natural, essencial pra você!" />
+  <meta property="og:image" content="https://emporium-klorofila.github.io/produtos-naturais/cabecalho.png" />
+  <meta property="og:url" content="https://emporium-klorofila.github.io/produtos-naturais/" />
+  <meta property="og:type" content="website" />
+  <title>Emporium Klorofila - Produtos Naturais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .section {
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .section img {
+      width: 100%;
+      height: auto;
+      transition: opacity 0.5s ease;
+    }
+    .button {
+      display: inline-block;
+      width: 80%;
+      padding: 15px;
+      margin: 15px 0;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #107214;
+      border: 2px solid #7aca2a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button:hover {
+      background-color: #0d4f0a;
+    }
+    footer {
+      margin: 40px 0 20px;
+      font-size: 14px;
+      color: #107214;
+      background-color: #f8f8f8;
+      padding: 10px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-indicators {
+      text-align: center;
+      margin-top: 8px;
+    }
+    .carousel-indicators span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0 4px;
+      background-color: #999;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .carousel-indicators .active {
+      background-color: #000;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    Emporium Klorofila
-</header>
-
-<!-- Seção 1 - Banner Logo -->
-<div class="section">
-    <img src="cabecalho.png" alt="Banner Logo">
+  <!-- Seção 1 - Banner e contato -->
+  <div class="section">
+    <img src="cabecalho.png" alt="Banner Emporium Klorofila">
     <a class="button" href="https://api.whatsapp.com/send?phone=5521964013089&text=Ol%C3%A1%2C%20Emporium%20Klorofila%2C%20vim%20pelo%20link%20na%20bio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20produtos.">Fale Conosco</a>
-</div>
+  </div>
 
-<!-- Seção 2 - Conheça nossa loja online com carrossel -->
-<div class="section">
+  <!-- Seção 2 - Loja Shopee -->
+  <div class="section">
     <div class="carousel-container" id="carousel-container-loja">
-        <img src="produtos-naturais.png" alt="Loja Emporium Klorofila" id="carousel-loja">
-        <div class="carousel-indicators" id="indicators-loja"></div>
+      <img src="aromaterapia.png" alt="Loja Emporium Klorofila" id="carousel-loja">
+      <div class="carousel-indicators" id="indicators-loja"></div>
     </div>
-    <a class="button" href="https://emporium-klorofila.github.io/produtos-naturais/">Acessar a loja Emporium Klorofila</a>
-</div>
+    <a class="button" href="https://shopee.com.br/lotusdearoma">Acessar a loja na Shopee</a>
+  </div>
 
-<!-- Seção 3 - Endereço loja física -->
-<div class="section">
+  <!-- Seção 3 - Endereço -->
+  <div class="section">
     <img src="envios.png" alt="Informações de envio">
     <a class="button" href="https://maps.app.goo.gl/LdWX1n9oQuPqXu7d6">Ver rota no Google Maps</a>
-</div>
+  </div>
 
-<!-- Seção 4 - Seja um parceiro Emporium Klorofila com carrossel -->
-<div class="section">
+  <!-- Seção 4 - Redes sociais -->
+  <div class="section">
     <div class="carousel-container" id="carousel-container-parceria">
-        <img src="aromaterapia.png" alt="Parceiro Emporium Klorofila" id="carousel-parceria">
-        <div class="carousel-indicators" id="indicators-parceria"></div>
+      <img src="instagram (2).png" alt="Instagram Emporium Klorofila" id="carousel-parceria">
+      <div class="carousel-indicators" id="indicators-parceria"></div>
     </div>
-    <a class="button" href="https://wa.me/5521964013089?text=Ol%C3%A1%20Emporium%20Klorofila%2C%20vim%20pelo%20link%20da%20bio%20e%20quero%20me%20cadastrar%20para%20aproveitar%20os%20descontos%20exclusivos.">Quero me cadastrar</a>
-</div>
+    <a class="button" href="https://www.instagram.com/klorofila_emporium">Seguir no Instagram</a>
+  </div>
 
-<!-- Seção 5 - Seguir nas redes sociais -->
-<div class="section">
-    <img src="instagram.png" alt="Seguir nas redes sociais">
-    <a class="button" href="https://www.instagram.com/emporiumklorofila/">Seguir Emporium Klorofila no Instagram</a>
-</div>
-
-<footer>
+  <footer>
     © 2025 Emporium Klorofila - Todos os direitos reservados.
-</footer>
+  </footer>
 
-<!-- Botão Flutuante WhatsApp -->
-<a href="https://api.whatsapp.com/send?phone=5521964013089&text=Olá,%20Emporium%20Klorofila,%20vim%20pelo%20link%20na%20bio%20e%20gostaria%20de%20mais%20informações." 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Conversar no WhatsApp">
-    <img src="whatsapp.png" alt="WhatsApp" />
-</a>
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=5521964013089&text=Olá,%20Emporium%20Klorofila,%20vim%20pelo%20link%20na%20bio%20e%20gostaria%20de%20mais%20informações." 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="Conversar no WhatsApp">
+    <img src="whatsapp.png" alt="WhatsApp">
+  </a>
 
-<script>
+  <script>
     function addSwipe(elementId, imageArray, imageElementId, indicatorsId) {
-        let index = 0;
-        let startX = 0;
-        let isDown = false;
+      let index = 0;
+      let startX = 0;
+      let isDown = false;
 
-        const imageElement = document.getElementById(imageElementId);
-        const container = document.getElementById(elementId);
-        const indicators = document.getElementById(indicatorsId);
+      const imageElement = document.getElementById(imageElementId);
+      const container = document.getElementById(elementId);
+      const indicators = document.getElementById(indicatorsId);
 
-        function updateIndicators() {
-            indicators.innerHTML = '';
-            imageArray.forEach((_, i) => {
-                const span = document.createElement('span');
-                if (i === index) span.classList.add('active');
-                span.addEventListener('click', () => {
-                    index = i;
-                    fadeToImage(imageElementId, imageArray[index]);
-                    updateIndicators();
-                });
-                indicators.appendChild(span);
-            });
-        }
-
-        function fadeToImage(imgId, newSrc) {
-            const img = document.getElementById(imgId);
-            img.style.opacity = 0;
-            setTimeout(() => {
-                img.src = newSrc;
-                img.style.opacity = 1;
-            }, 300);
-        }
-
-        function nextImage() {
-            index = (index + 1) % imageArray.length;
+      function updateIndicators() {
+        indicators.innerHTML = '';
+        imageArray.forEach((_, i) => {
+          const span = document.createElement('span');
+          if (i === index) span.classList.add('active');
+          span.addEventListener('click', () => {
+            index = i;
             fadeToImage(imageElementId, imageArray[index]);
             updateIndicators();
-        }
-
-        // Touch events
-        container.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            isDown = true;
+          });
+          indicators.appendChild(span);
         });
+      }
 
-        container.addEventListener('touchmove', (e) => {
-            if (!isDown) return;
-            const diffX = e.touches[0].clientX - startX;
-            if (Math.abs(diffX) > 50) {
-                if (diffX < 0) {
-                    nextImage();
-                } else {
-                    index = (index - 1 + imageArray.length) % imageArray.length;
-                    fadeToImage(imageElementId, imageArray[index]);
-                    updateIndicators();
-                }
-                isDown = false;
-            }
-        });
+      function fadeToImage(imgId, newSrc) {
+        const img = document.getElementById(imgId);
+        img.style.opacity = 0;
+        setTimeout(() => {
+          img.src = newSrc;
+          img.style.opacity = 1;
+        }, 300);
+      }
 
-        container.addEventListener('touchend', () => {
-            isDown = false;
-        });
-
-        // Mouse events (desktop)
-        container.addEventListener('mousedown', (e) => {
-            startX = e.clientX;
-            isDown = true;
-        });
-
-        container.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            const diffX = e.clientX - startX;
-            if (Math.abs(diffX) > 50) {
-                if (diffX < 0) {
-                    nextImage();
-                } else {
-                    index = (index - 1 + imageArray.length) % imageArray.length;
-                    fadeToImage(imageElementId, imageArray[index]);
-                    updateIndicators();
-                }
-                isDown = false;
-            }
-        });
-
-        container.addEventListener('mouseup', () => {
-            isDown = false;
-        });
-
-        // Auto slide
-        setInterval(() => {
-            nextImage();
-        }, 5000);
-
-        // Inicializar indicadores
+      function nextImage() {
+        index = (index + 1) % imageArray.length;
+        fadeToImage(imageElementId, imageArray[index]);
         updateIndicators();
+      }
+
+      container.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDown = true;
+      });
+      container.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        const diffX = e.touches[0].clientX - startX;
+        if (Math.abs(diffX) > 50) {
+          if (diffX < 0) {
+            nextImage();
+          } else {
+            index = (index - 1 + imageArray.length) % imageArray.length;
+            fadeToImage(imageElementId, imageArray[index]);
+            updateIndicators();
+          }
+          isDown = false;
+        }
+      });
+      container.addEventListener('touchend', () => { isDown = false; });
+
+      container.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+        isDown = true;
+      });
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        const diffX = e.clientX - startX;
+        if (Math.abs(diffX) > 50) {
+          if (diffX < 0) {
+            nextImage();
+          } else {
+            index = (index - 1 + imageArray.length) % imageArray.length;
+            fadeToImage(imageElementId, imageArray[index]);
+            updateIndicators();
+          }
+          isDown = false;
+        }
+      });
+      container.addEventListener('mouseup', () => { isDown = false; });
+
+      setInterval(() => { nextImage(); }, 5000);
+      updateIndicators();
     }
 
-    // Inicialização
     document.addEventListener('DOMContentLoaded', () => {
-        addSwipe(
-            'carousel-container-loja',
-            [
-                'produtos-naturais.png',
-                'suplementos.png',
-                'cosmeticos.png'
-            ],
-            'carousel-loja',
-            'indicators-loja'
-        );
-
-        addSwipe(
-            'carousel-container-parceria',
-            [
-                'aromaterapia.png',
-                'envios.png',
-                'instagram.png'
-            ],
-            'carousel-parceria',
-            'indicators-parceria'
-        );
+      addSwipe(
+        'carousel-container-loja',
+        ['aromaterapia.png', 'cosmeticos.png', 'suplementos.png'],
+        'carousel-loja',
+        'indicators-loja'
+      );
+      addSwipe(
+        'carousel-container-parceria',
+        ['instagram (2).png', 'instagram (3).png', 'instagram.png'],
+        'carousel-parceria',
+        'indicators-parceria'
+      );
     });
-</script>
-
+  </script>
 </body>
 </html>
