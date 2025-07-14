@@ -1,47 +1,292 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Início</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #007a5e;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    footer {
-      background-color: #e0e0e0;
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://garen-rj.github.io/distribuidor-autorizado/imgs/garen-rj-distribuidor.ico" />
+
+    <!-- Open Graph para compartilhamento -->
+    <meta property="og:title" content="Garen RJ - Distribuidor Autorizado" />
+    <meta property="og:description" content="Os melhores produtos para segurança, automação e monitoramento você encontra aqui!" />
+    <meta property="og:image" content="https://garen-rj.github.io/distribuidor-autorizado/imgs/garen-rj-distribuidora-autorizada.png" />
+    <meta property="og:url" content="https://garen-rj.github.io/distribuidor-autorizado/" />
+    <meta property="og:type" content="website" />
+
+    <title>Garen RJ - Distribuidor Autorizado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+    display: none;
+    /* Código anterior comentado */
+    /* background-color: #0b1785;
+    color: #1893f8;
+    font-size: 24px;
+    padding: 20px 10px;
+    font-weight: bold; */
+}
+        .section {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 0px;
+            transition: opacity 0.5s ease;
+        }
+        .button {
+            display: inline-block;
+            width: 80%;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #0b1785;
+            border: 2px solid #1893f8;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #222222;
+        }
+        footer {
+            margin: 40px 0 20px;
+            font-size: 14px;
+            color: #0b1785;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        /* Botão flutuante do WhatsApp - somente imagem */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .whatsapp-float img {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            background: none;
+        }
+
+        /* Carrossel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin: 0 4px;
+            background-color: #999;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-indicators .active {
+            background-color: #000;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Bem-vindo ao meu site</h1>
-  </header>
 
-  <main>
-    <h2>Página Inicial</h2>
-    <p>Este é um modelo básico de index.html. Edite este conteúdo conforme suas necessidades.</p>
-  </main>
+<header>
+    Garen RJ
+</header>
 
-  <footer>
-    <p>&copy; 2025 - Todos os direitos reservados.</p>
-  </footer>
+<!-- Seção 1 - Banner Logo -->
+<div class="section">
+    <img src="imgs/garen-distribuidor-autorizado-rj.png" alt="Banner Logo">
+    <a class="button" href="https://api.whatsapp.com/send?phone=5521979982707&text=Ol%C3%A1%2C%20Garen%20RJ%2C%20vim%20pelo%20link%20na%20bio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20produtos.">Fale Conosco</a>
+</div>
+
+<!-- Seção 2 - Conheça nossa loja online com carrossel -->
+<div class="section">
+    <div class="carousel-container" id="carousel-container-loja">
+        <img src="imgs/garen-rj-loja-online.png" alt="loja distribuidor garen" id="carousel-loja">
+        <div class="carousel-indicators" id="indicators-loja"></div>
+    </div>
+    <a class="button" href="https://garenrj.com.br/">Acessar a loja Garen RJ</a>
+</div>
+
+<!-- Seção 3 - Endereço loja física -->
+<div class="section">
+    <img src="imgs/garen-rj-endereco.png" alt="Loja física">
+    <a class="button" href="https://maps.app.goo.gl/LdWX1n9oQuPqXu7d6">Ver rota no Google Maps</a>
+</div>
+
+<!-- Seção 4 - Seja um parceiro Garen RJ com carrossel -->
+<div class="section">
+    <div class="carousel-container" id="carousel-container-parceria">
+        <img src="imgs/garen-rj-cadastro-de-tecnicos.png" alt="parceiro Garen RJ" id="carousel-parceria">
+        <div class="carousel-indicators" id="indicators-parceria"></div>
+    </div>
+    <a class="button" href="https://wa.me/5521979982707?text=Ol%C3%A1%20Garen%20RJ%2C%20vim%20pelo%20link%20da%20bio%20e%20quero%20me%20cadastrar%20para%20aproveitar%20os%20descontos%20exclusivos%20para%20t%C3%A9cnicos%20e%20instaladores.
+">Quero me cadastrar</a>
+</div>
+
+<!-- Seção 5 - Seguir nas redes sociais -->
+<div class="section">
+    <img src="imgs/garen-rj-seguir-no-instagram.png" alt="Seguir nas redes sociais">
+    <a class="button" href="https://www.instagram.com/garen.rj/">Seguir Garen RJ no instagram</a>
+</div>
+
+<footer>
+    © 2025 GAREN RJ - REF DISTRIBUIDORA LTDA - GRUPO SC INFO BRASIL - Todos os direitos reservados.
+</footer>
+
+<!-- Botão Flutuante WhatsApp -->
+<a href="https://api.whatsapp.com/send?phone=5521979982707&text=Olá,%20Garen%20RJ,%20vim%20pelo%20link%20na%20bio%20e%20gostaria%20de%20mais%20informações." 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Conversar no WhatsApp">
+    <img src="imgs/whatsapp-garen-rj.png" alt="WhatsApp" />
+</a>
+
+<script>
+    function addSwipe(elementId, imageArray, imageElementId, indicatorsId) {
+        let index = 0;
+        let startX = 0;
+        let isDown = false;
+
+        const imageElement = document.getElementById(imageElementId);
+        const container = document.getElementById(elementId);
+        const indicators = document.getElementById(indicatorsId);
+
+        function updateIndicators() {
+            indicators.innerHTML = '';
+            imageArray.forEach((_, i) => {
+                const span = document.createElement('span');
+                if (i === index) span.classList.add('active');
+                span.addEventListener('click', () => {
+                    index = i;
+                    fadeToImage(imageElementId, imageArray[index]);
+                    updateIndicators();
+                });
+                indicators.appendChild(span);
+            });
+        }
+
+        function fadeToImage(imgId, newSrc) {
+            const img = document.getElementById(imgId);
+            img.style.opacity = 0;
+            setTimeout(() => {
+                img.src = newSrc;
+                img.style.opacity = 1;
+            }, 300);
+        }
+
+        function nextImage() {
+            index = (index + 1) % imageArray.length;
+            fadeToImage(imageElementId, imageArray[index]);
+            updateIndicators();
+        }
+
+        // Touch events
+        container.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDown = true;
+        });
+
+        container.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const diffX = e.touches[0].clientX - startX;
+            if (Math.abs(diffX) > 50) {
+                if (diffX < 0) {
+                    nextImage();
+                } else {
+                    index = (index - 1 + imageArray.length) % imageArray.length;
+                    fadeToImage(imageElementId, imageArray[index]);
+                    updateIndicators();
+                }
+                isDown = false;
+            }
+        });
+
+        container.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        // Mouse events (desktop)
+        container.addEventListener('mousedown', (e) => {
+            startX = e.clientX;
+            isDown = true;
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            const diffX = e.clientX - startX;
+            if (Math.abs(diffX) > 50) {
+                if (diffX < 0) {
+                    nextImage();
+                } else {
+                    index = (index - 1 + imageArray.length) % imageArray.length;
+                    fadeToImage(imageElementId, imageArray[index]);
+                    updateIndicators();
+                }
+                isDown = false;
+            }
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        // Auto slide
+        setInterval(() => {
+            nextImage();
+        }, 5000);
+
+        // Inicializar indicadores
+        updateIndicators();
+    }
+
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+        addSwipe(
+            'carousel-container-loja',
+            [
+                'imgs/garen-rj-loja-online.png',
+                'imgs/garen-rj-distribuidor-motores-de-portao.png',
+                'imgs/garen-rj-distribuidor-oficial.png'
+            ],
+            'carousel-loja',
+            'indicators-loja'
+        );
+
+        addSwipe(
+            'carousel-container-parceria',
+            [
+                'imgs/garen-rj-cadastro-de-tecnicos.png',
+                'imgs/distribuidor-garen-seg-no-rio-de-janeiro.png',
+                'imgs/garen-rj-cursos-workshops.png'
+            ],
+            'carousel-parceria',
+            'indicators-parceria'
+        );
+    });
+</script>
+
 </body>
 </html>
